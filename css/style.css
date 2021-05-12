@@ -1,0 +1,40 @@
+#content {
+    font-family: 'Lato', sans-serif;
+    font-size: large;
+    padding: 15px;
+
+    border: 1px solid black;
+    border-radius: 15px;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+#first_page, #second_page, #third_page, #fourth_page, #fifth_page {
+    display: none;
+}
+
+button, input {
+    font-size: large;
+    margin-right: 20px;
+    border-radius: 10px;
+    outline: none;
+    font-family: 'Lato', sans-serif;
+
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+label {
+    margin-right: 10px;
+}
+
+div#samples_div input[type="text"] {
+    width: 90%;
+}
