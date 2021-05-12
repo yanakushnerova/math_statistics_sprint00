@@ -11,37 +11,12 @@ let calculate3 = document.getElementById("task3_calculate")
 let calculate4 = document.getElementById("task4_calculate")
 let calculate5 = document.getElementById("task5_calculate")
 
-let task1_info = document.createElement("p")
-task1_info.setAttribute("id", "task1_info")
+let sample_info = document.createElement("p")
+sample_info.setAttribute("id", "sample_info")
 
 let samples_div = document.getElementById("samples_div")
 let generate_sample = document.getElementById("generate_sample")
 let set_default = document.getElementById("set_default")
-
-function generateInputs(n) {
-    let names = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", 
-    "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-    
-    let inputs = document.createElement("div")
-    inputs.id = "sample_inputs"
-    
-
-    for (let i = 0; i < n; i++) {
-        let label = document.createElement("label")
-        label.innerHTML = names[i] + ":"
-        let input = document.createElement("input")
-        input.setAttribute("id", "task1-" + (i + 1))
-        input.setAttribute("type", "text")
-
-        let br = document.createElement("br")
-
-        inputs.appendChild(label)
-        inputs.appendChild(input)
-        inputs.appendChild(br)
-    }
-
-    samples_div.appendChild(inputs)
-}
 
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById("task_1").onclick = function() {
@@ -95,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     generate_sample.onclick = function() {
-        task1_info.innerText = ""
+        sample_info.innerText = ""
 
         if (document.getElementById("sample_inputs")) {
             document.getElementById("sample_inputs").remove()
@@ -104,19 +79,53 @@ document.addEventListener('DOMContentLoaded', function() {
         let samples = document.getElementById("sample_n").value
 
         if (samples > 26 || samples < 2) {
-            task1_info.innerText = "Incorrect number of samples"
+            sample_info.innerText = "Incorrect number of samples"
         } else {
             generateInputs(samples)
         }
 
-        samples_div.appendChild(task1_info)
+        samples_div.appendChild(sample_info)
     }
 
     set_default.onclick = function() {
-        
+        sample_info.innerText = ""
+
+        if (document.getElementById("sample_inputs")) {
+            document.getElementById("sample_inputs").remove()
+        }
+
+        generateInputs(2)
+
+        document.getElementById("sample-1").value = default_sample_A
+        document.getElementById("sample-2").value = default_sample_B
+
+        parseSample(default_sample_A)
+        parseSample(default_sample_B)
     }
 
     task1_calculate.onclick = function() {
+        let n = document.querySelectorAll("#sample_inputs > input");
+        console.log(n.length)
+
+        for (let i = 0; i < n.length; i++) {
+            parseSample(n[i])
+            console.log(parseSample(n[i]))
+        }
+    }
+
+    task2_calculate.onclick = function() {
+
+    }
+
+    task3_calculate.onclick = function() {
+
+    }
+
+    task4_calculate.onclick = function() {
+
+    }
+
+    task5_calculate.onclick = function() {
 
     }
 });
