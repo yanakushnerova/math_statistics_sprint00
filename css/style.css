@@ -38,3 +38,16 @@ label {
 div#samples_div input[type="text"] {
     width: 90%;
 }
+
+table {
+    /* border: 1px solid black; */
+}
+
+th, td, tr {
+    border: 1px solid black;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+}

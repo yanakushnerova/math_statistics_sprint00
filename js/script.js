@@ -109,15 +109,16 @@ document.addEventListener('DOMContentLoaded', function() {
         let arr = []
 
         for (let i = 0; i < n.length; i++) {
-            if (i == 0) {
-                arr_temp = parseSample(n[i].value)
-            } else {
-                arr = arr_temp.concat(parseSample(n[i].value))
-            }
-            console.log(parseSample(n[i].value))
+            arr = arr.concat(parseSample(n[i].value))
         }
+        
+        arr.sort((a, b) => a - b)
 
-        console.log(arr)
+        let new_array = removeDuplicates(arr)
+        let frequency_array = countFrequency(arr)
+        console.log(new_array)
+        console.log(frequency_array)
+        frequencyTable(new_array, frequency_array)
     }
 
     // task2_calculate.onclick = function() {
@@ -137,5 +138,5 @@ document.addEventListener('DOMContentLoaded', function() {
     // }
 });
 
-console.log(parseSample(default_sample_A))
-console.log(parseSample(default_sample_B))
+// console.log(parseSample(default_sample_A))
+// console.log(parseSample(default_sample_B))

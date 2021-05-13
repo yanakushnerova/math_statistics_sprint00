@@ -37,6 +37,22 @@ function parseSample(sample) {
     return parsed_sample
 }
 
-function uniteSamples() {
-
+function countFrequency(arr) {
+    let duplicates = {}
+    arr.forEach(function(x) { duplicates[x] = (duplicates[x] || 0)+1; });
+    return duplicates
 }
+
+function removeDuplicates(arr) {
+    let new_array = []
+
+    new_array = arr.filter(function(item, pos) {
+        return arr.indexOf(item) == pos;
+    })
+
+    return new_array
+}
+
+let a = [2, 4, -3, 4, 4, 5, -7, 1]
+console.log(countFrequency(a))
+console.log(removeDuplicates(a))
