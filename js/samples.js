@@ -44,15 +44,12 @@ function countFrequency(arr) {
 }
 
 function removeDuplicates(arr) {
+    let temp_array = JSON.parse(JSON.stringify(arr))
     let new_array = []
 
-    new_array = arr.filter(function(item, pos) {
-        return arr.indexOf(item) == pos;
+    new_array = temp_array.filter(function(item, pos) {
+        return temp_array.indexOf(item) == pos;
     })
 
     return new_array
 }
-
-let a = [2, 4, -3, 4, 4, 5, -7, 1]
-console.log(countFrequency(a))
-console.log(removeDuplicates(a))

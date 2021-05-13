@@ -98,32 +98,41 @@ document.addEventListener('DOMContentLoaded', function() {
 
         document.getElementById("sample-1").value = default_sample_A
         document.getElementById("sample-2").value = default_sample_B
-
-        parseSample(default_sample_A)
-        parseSample(default_sample_B)
     }
 
     task1_calculate.onclick = function() {
         let n = document.querySelectorAll("#sample_inputs > input");
-
         let arr = []
 
         for (let i = 0; i < n.length; i++) {
             arr = arr.concat(parseSample(n[i].value))
         }
-        
+    
         arr.sort((a, b) => a - b)
-
         let new_array = removeDuplicates(arr)
         let frequency_array = countFrequency(arr)
-        console.log(new_array)
-        console.log(frequency_array)
         frequencyTable(new_array, frequency_array)
     }
 
-    // task2_calculate.onclick = function() {
+    task2_calculate.onclick = function() {
+        let n = document.querySelectorAll("#sample_inputs > input");
+        let arr = []
 
-    // }
+        for (let i = 0; i < n.length; i++) {
+            arr = arr.concat(parseSample(n[i].value))
+        }
+    
+        arr.sort((a, b) => a - b)
+        let new_array = removeDuplicates(arr)
+
+        let frequency_array = countFrequency(arr)
+
+        console.table(new_array)
+        console.log(frequency_array)
+
+        createPolygonChart(frequency_array)
+        createBarChart(frequency_array)
+    }
 
     // task3_calculate.onclick = function() {
 
