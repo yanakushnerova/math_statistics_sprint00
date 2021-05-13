@@ -37,5 +37,6 @@ function parseSample(sample) {
     return parsed_sample
 }
 
-console.log(parseSample(default_sample_A))
-console.log(parseSample(default_sample_B))
+function uniteSamples() {
+
+}

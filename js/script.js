@@ -105,27 +105,37 @@ document.addEventListener('DOMContentLoaded', function() {
 
     task1_calculate.onclick = function() {
         let n = document.querySelectorAll("#sample_inputs > input");
-        console.log(n.length)
+
+        let arr = []
 
         for (let i = 0; i < n.length; i++) {
-            parseSample(n[i])
-            console.log(parseSample(n[i]))
+            if (i == 0) {
+                arr_temp = parseSample(n[i].value)
+            } else {
+                arr = arr_temp.concat(parseSample(n[i].value))
+            }
+            console.log(parseSample(n[i].value))
         }
+
+        console.log(arr)
     }
 
-    task2_calculate.onclick = function() {
+    // task2_calculate.onclick = function() {
 
-    }
+    // }
 
-    task3_calculate.onclick = function() {
+    // task3_calculate.onclick = function() {
 
-    }
+    // }
 
-    task4_calculate.onclick = function() {
+    // task4_calculate.onclick = function() {
 
-    }
+    // }
 
-    task5_calculate.onclick = function() {
+    // task5_calculate.onclick = function() {
 
-    }
+    // }
 });
+
+console.log(parseSample(default_sample_A))
+console.log(parseSample(default_sample_B))
