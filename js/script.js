@@ -146,6 +146,3 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // }
 });
-
-// console.log(parseSample(default_sample_A))
-// console.log(parseSample(default_sample_B))
