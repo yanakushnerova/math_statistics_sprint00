@@ -52,7 +52,16 @@ th, td, tr {
     text-align: center;
 }
 
-#bar_chart, #polygon_chart {
+#bar_chart::after, #polygon_chart::after {
     width: 1000px;
     height: 700px;
+}
+
+div#task1_solution p {
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+div#task1_solution div {
+    font-size: x-large;
 }

@@ -11,6 +11,15 @@ let calculate3 = document.getElementById("task3_calculate")
 let calculate4 = document.getElementById("task4_calculate")
 let calculate5 = document.getElementById("task5_calculate")
 
+let solution1 = document.getElementById("task1_solution")
+let solution2 = document.getElementById("task2_solution")
+let solution3 = document.getElementById("task3_solution")
+let solution4 = document.getElementById("task4_solution")
+let solution5 = document.getElementById("task5_solution")
+
+const sample_names = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", 
+    "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+
 let sample_info = document.createElement("p")
 sample_info.setAttribute("id", "sample_info")
 
@@ -20,53 +29,23 @@ let set_default = document.getElementById("set_default")
 
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById("task_1").onclick = function() {
-        content_page.style.display = "none"
         first_page.style.display = "block"
     }
 
     document.getElementById("task_2").onclick = function() {
-        content_page.style.display = "none"
         second_page.style.display = "block"
     }
 
     document.getElementById("task_3").onclick = function() {
-        content_page.style.display = "none"
         third_page.style.display = "block"
     }
 
     document.getElementById("task_4").onclick = function() {
-        content_page.style.display = "none"
         fourth_page.style.display = "block"
     }
 
     document.getElementById("task_5").onclick = function() {
-        content_page.style.display = "none"
         fifth_page.style.display = "block"
-    }
-
-    document.getElementById("turn_back_1").onclick = function() {
-        content_page.style.display = "block"
-        first_page.style.display = "none"
-    }
-
-    document.getElementById("turn_back_2").onclick = function() {
-        content_page.style.display = "block"
-        second_page.style.display = "none"
-    }
-
-    document.getElementById("turn_back_3").onclick = function() {
-        content_page.style.display = "block"
-        third_page.style.display = "none"
-    }
-
-    document.getElementById("turn_back_4").onclick = function() {
-        content_page.style.display = "block"
-        fourth_page.style.display = "none"
-    }
-
-    document.getElementById("turn_back_5").onclick = function() {
-        content_page.style.display = "block"
-        fifth_page.style.display = "none"
     }
 
     generate_sample.onclick = function() {
@@ -105,34 +84,39 @@ document.addEventListener('DOMContentLoaded', function() {
         let arr = []
 
         for (let i = 0; i < n.length; i++) {
-            arr = arr.concat(parseSample(n[i].value))
+            solution1.innerHTML += "<p>Sample " + (sample_names[i]) + ": </p>"
+            outputSample(i, n[i].value)
         }
+
+        // for (let i = 0; i < n.length; i++) {
+        //     arr = arr.concat(parseSample(n[i].value))
+        // }
     
-        arr.sort((a, b) => a - b)
-        let new_array = removeDuplicates(arr)
-        let frequency_array = countFrequency(arr)
-        frequencyTable(new_array, frequency_array)
+        // arr.sort((a, b) => a - b)
+        // let new_array = removeDuplicates(arr)
+        // let frequency_array = countFrequency(arr)
+        // frequencyTable(new_array, frequency_array)
     }
 
-    task2_calculate.onclick = function() {
-        let n = document.querySelectorAll("#sample_inputs > input");
-        let arr = []
+    // task2_calculate.onclick = function() {
+    //     let n = document.querySelectorAll("#sample_inputs > input");
+    //     let arr = []
 
-        for (let i = 0; i < n.length; i++) {
-            arr = arr.concat(parseSample(n[i].value))
-        }
+    //     for (let i = 0; i < n.length; i++) {
+    //         arr = arr.concat(parseSample(n[i].value))
+    //     }
     
-        arr.sort((a, b) => a - b)
-        let new_array = removeDuplicates(arr)
+    //     arr.sort((a, b) => a - b)
+    //     let new_array = removeDuplicates(arr)
 
-        let frequency_array = countFrequency(arr)
+    //     let frequency_array = countFrequency(arr)
 
-        console.table(new_array)
-        console.log(frequency_array)
+    //     console.table(new_array)
+    //     console.log(frequency_array)
 
-        createPolygonChart(frequency_array)
-        createBarChart(frequency_array)
-    }
+    //     createPolygonChart(frequency_array)
+    //     createBarChart(frequency_array)
+    // }
 
     // task3_calculate.onclick = function() {
 

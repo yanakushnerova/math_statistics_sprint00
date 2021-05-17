@@ -53,3 +53,11 @@ function removeDuplicates(arr) {
 
     return new_array
 }
+
+function outputSample(i, arr) {
+    let sample_output = document.createElement("div")
+    sample_output.setAttribute("id", "sample_output_" + i)
+
+    sample_output.innerHTML += "<div>Variation series: </div><br>"
+    document.getElementById("task1_solution").appendChild(sample_output)
+}
