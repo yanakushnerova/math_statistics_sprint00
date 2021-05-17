@@ -58,6 +58,36 @@ function outputSample(i, arr) {
     let sample_output = document.createElement("div")
     sample_output.setAttribute("id", "sample_output_" + i)
 
-    sample_output.innerHTML += "<div>Variation series: </div><br>"
+    sample_output.innerHTML += "<div>Variation series:   </div><div>["
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr.length == 1 || i == arr.length - 1) {
+            sample_output.innerText += arr[i]
+        } else {
+            sample_output.innerText += arr[i] + ", "
+        }
+    }
+
+    sample_output.innerHTML += "]</div>"
     document.getElementById("task1_solution").appendChild(sample_output)
+}
+
+function outputRange(i, arr) {
+    let sample_range = document.createElement("div")
+    sample_range.setAttribute("id", "sample_range_" + i)
+
+    sample_range.innerHTML += "<div>Range:   </div><div>["
+
+    for (let i = 0; i < arr.length; i++) {
+        if (i == 0) {
+            sample_range.innerText += arr[i] + ", "
+        }
+
+        if (i == arr.length - 1) {
+            sample_range.innerText += arr[i]
+        }
+    }
+
+    sample_range.innerHTML += "]</div>"
+    document.getElementById("task1_solution").appendChild(sample_range)
 }

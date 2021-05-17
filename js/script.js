@@ -80,43 +80,49 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     task1_calculate.onclick = function() {
-        let n = document.querySelectorAll("#sample_inputs > input");
-        let arr = []
+        solution1.innerHTML = ""
+        let n = document.querySelectorAll("#sample_inputs > input")
 
         for (let i = 0; i < n.length; i++) {
             solution1.innerHTML += "<p>Sample " + (sample_names[i]) + ": </p>"
-            outputSample(i, n[i].value)
-        }
+            let arr = parseSample(n[i].value)
+            arr.sort((a, b) => a - b)
+            outputSample(i, arr)
+            solution1.innerHTML += "<br>"
+            outputRange(i, arr)
+            solution1.innerHTML += "<br><div>Table: <div><br>"
 
-        // for (let i = 0; i < n.length; i++) {
-        //     arr = arr.concat(parseSample(n[i].value))
-        // }
-    
-        // arr.sort((a, b) => a - b)
-        // let new_array = removeDuplicates(arr)
-        // let frequency_array = countFrequency(arr)
-        // frequencyTable(new_array, frequency_array)
+            let new_array = removeDuplicates(arr)
+            let frequency_array = countFrequency(arr)
+            frequencyTable(new_array, frequency_array)
+        }
     }
 
-    // task2_calculate.onclick = function() {
-    //     let n = document.querySelectorAll("#sample_inputs > input");
-    //     let arr = []
-
-    //     for (let i = 0; i < n.length; i++) {
-    //         arr = arr.concat(parseSample(n[i].value))
-    //     }
+    task2_calculate.onclick = function() {
+        solution2.innerHTML = ""
+        let n = document.querySelectorAll("#sample_inputs > input");
+        
+        for (let i = 0; i < n.length ; i++) {
+            solution2.innerHTML += "<p>Sample " + (sample_names[i]) + ": </p>"
+            let arr = parseSample(n[i].value)
+            arr.sort((a, b) => a - b)
+            // let arr_2 = removeDuplicates(arr)
+            let frequency_array = countFrequency(arr)
+            console.log(frequency_array)
+            // createPolygonChart(frequency_array)
+   
+            createBarChart(i, frequency_array)
+        }
     
-    //     arr.sort((a, b) => a - b)
-    //     let new_array = removeDuplicates(arr)
+        // arr.sort((a, b) => a - b)
+        
 
-    //     let frequency_array = countFrequency(arr)
+        // console.table(new_array)
+        // console.log(frequency_array)
 
-    //     console.table(new_array)
-    //     console.log(frequency_array)
-
-    //     createPolygonChart(frequency_array)
-    //     createBarChart(frequency_array)
-    // }
+        // createPolygonChart(frequency_array)
+        // createBarChart(frequency_array)
+    }
 
     // task3_calculate.onclick = function() {
 
