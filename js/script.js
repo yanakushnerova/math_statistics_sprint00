@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
         let n = document.querySelectorAll("#sample_inputs > input");
         
         for (let i = 0; i < n.length ; i++) {
-            solution2.innerHTML += "<p>Sample " + (sample_names[i]) + ": </p>"
+            // solution2.innerHTML += "<p>Sample " + (sample_names[i]) + ": </p>"
             let arr = parseSample(n[i].value)
             arr.sort((a, b) => a - b)
             // let arr_2 = removeDuplicates(arr)
@@ -113,15 +113,6 @@ document.addEventListener('DOMContentLoaded', function() {
    
             createBarChart(i, frequency_array)
         }
-    
-        // arr.sort((a, b) => a - b)
-        
-
-        // console.table(new_array)
-        // console.log(frequency_array)
-
-        // createPolygonChart(frequency_array)
-        // createBarChart(frequency_array)
     }
 
     // task3_calculate.onclick = function() {
