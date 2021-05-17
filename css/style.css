@@ -39,10 +39,6 @@ div#samples_div input[type="text"] {
     width: 90%;
 }
 
-/* table {
-    border: 1px solid black;
-} */
-
 th, td, tr {
     border: 1px solid black;
     padding-left: 20px;
@@ -52,14 +48,13 @@ th, td, tr {
     text-align: center;
 }
 
-/* #bar_chart::after, #polygon_chart::after {
-    width: 1000px;
-    height: 700px;
-} */
+.barchart, .polygonchart {
+    margin-bottom: 50px;
+}
 
 canvas {
-    width: 100vh;
-    max-width: 100%;
+    max-width: 800px;
+    max-height: 400px;
 }
 
 div#task1_solution p {

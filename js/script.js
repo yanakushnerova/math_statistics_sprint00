@@ -103,21 +103,26 @@ document.addEventListener('DOMContentLoaded', function() {
         let n = document.querySelectorAll("#sample_inputs > input");
         
         for (let i = 0; i < n.length ; i++) {
-            // solution2.innerHTML += "<p>Sample " + (sample_names[i]) + ": </p>"
             let arr = parseSample(n[i].value)
             arr.sort((a, b) => a - b)
-            // let arr_2 = removeDuplicates(arr)
             let frequency_array = countFrequency(arr)
             console.log(frequency_array)
-            // createPolygonChart(frequency_array)
-   
+            createPolygonChart(i, frequency_array)
             createBarChart(i, frequency_array)
         }
     }
 
-    // task3_calculate.onclick = function() {
-
-    // }
+    task3_calculate.onclick = function() {
+        solution3.innerHTML = ""
+        let n = document.querySelectorAll("#sample_inputs > input");
+        
+        for (let i = 0; i < n.length ; i++) {
+            let arr = parseSample(n[i].value)
+            arr.sort((a, b) => a - b)
+            let frequency_array = countFrequency(arr)
+            
+        }
+    }
 
     // task4_calculate.onclick = function() {
 

@@ -27,7 +27,7 @@ function generateInputs(n) {
 }
 
 function checkSampleInput() {
-    
+    // if ()
 }
 
 function parseSample(sample) {
