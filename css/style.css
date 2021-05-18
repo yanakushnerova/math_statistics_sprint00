@@ -61,7 +61,13 @@ div#task1_solution p {
     font-size: xx-large;
     font-weight: bold;
 }
+
 div#task2_solution p {
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+div#task3_solution p {
     font-size: xx-large;
     font-weight: bold;
 }
@@ -72,6 +78,16 @@ div#task1_solution div {
 
 div#task2_solution div {
     font-size: x-large;
+}
+
+div#task3_solution div {
+    font-size: x-large;
+    margin-bottom: 40px;
+}
+
+div#task3_solution span {
+    font-size: x-large;
+    margin-bottom: 5px;
 }
 
 body {

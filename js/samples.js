@@ -26,10 +26,6 @@ function generateInputs(n) {
     samples_div.appendChild(inputs)
 }
 
-function checkSampleInput() {
-    // if ()
-}
-
 function parseSample(sample) {
     let replace = sample.replace(/,/g, '.')
     let parsed_sample = replace.split(" ")
