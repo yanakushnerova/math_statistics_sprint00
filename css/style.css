@@ -79,6 +79,17 @@ div#task1_solution div {
 
 div#task2_solution div {
     font-size: x-large;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+div#task2_solution table {
+    font-size: x-large;
+}
+
+div#task2_solution td {
+    padding: 15px;
+    border: none;
 }
 
 div#task3_solution div {

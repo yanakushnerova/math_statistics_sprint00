@@ -9,7 +9,7 @@ function frequencyTable(arr, frequency) {
     for (let i = 0; i < arr.length; i++) {
         total_frequency += frequency[arr[i]]
     }
-
+    
     for (let i = 0; i < arr.length; i++) {
         let row = document.createElement("tr")
         let first = document.createElement("td")
