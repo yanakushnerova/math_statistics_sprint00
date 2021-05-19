@@ -85,10 +85,11 @@ document.addEventListener('DOMContentLoaded', function() {
         for (let i = 0; i < n.length ; i++) {
             let arr = parseSample(n[i].value)
             arr.sort((a, b) => a - b)
+            console.log(arr)
             let frequency_array = countFrequency(arr)
-            console.log(frequency_array)
             createPolygonChart(i, frequency_array)
             createBarChart(i, frequency_array)
+            empiricalDistribution(i, arr, frequency_array)
         }
     }
 

@@ -54,6 +54,7 @@ function createBarChart(i, frequency) {
     })
 }
 
-function empiricalDistribution() {
+function empiricalDistribution(i, arr, frequency) {
+    let new_arr = removeDuplicates(arr)
     
 }
