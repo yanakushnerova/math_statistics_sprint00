@@ -11,10 +11,6 @@ h1 {
     margin-bottom: 20px;
 }
 
-#first_page, #second_page, #third_page, #fourth_page, #fifth_page {
-    display: none;
-}
-
 button, input {
     font-size: large;
     margin-right: 20px;
@@ -88,6 +84,7 @@ div#task3_solution div {
 div#task3_solution span {
     font-size: x-large;
     margin-bottom: 5px;
+    font-weight: bold;
 }
 
 body {

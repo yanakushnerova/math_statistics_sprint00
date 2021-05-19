@@ -28,26 +28,6 @@ let generate_sample = document.getElementById("generate_sample")
 let set_default = document.getElementById("set_default")
 
 document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById("task_1").onclick = function() {
-        first_page.style.display = "block"
-    }
-
-    document.getElementById("task_2").onclick = function() {
-        second_page.style.display = "block"
-    }
-
-    document.getElementById("task_3").onclick = function() {
-        third_page.style.display = "block"
-    }
-
-    document.getElementById("task_4").onclick = function() {
-        fourth_page.style.display = "block"
-    }
-
-    document.getElementById("task_5").onclick = function() {
-        fifth_page.style.display = "block"
-    }
-
     generate_sample.onclick = function() {
         sample_info.innerText = ""
 
@@ -119,9 +99,18 @@ document.addEventListener('DOMContentLoaded', function() {
         for (let i = 0; i < n.length ; i++) {
             let arr = parseSample(n[i].value)
             arr.sort((a, b) => a - b)
-            let frequency_array = countFrequency(arr)
             sampleMean(i, arr)
             sampleMedian(arr)
+            sampleMode(arr)
+            sampleDispersion(arr)
+            sampleDeviation(arr)
+            sampleCoefficient(arr)
+            centralMoment3(arr)
+            centralMoment4(arr)
+            sampleAssymetry(arr)
+            sampleExcess(arr)
+            sampleCorrectedDispersion(arr)
+            sampleCorrectedDeviation(arr)
         }
     }
 
