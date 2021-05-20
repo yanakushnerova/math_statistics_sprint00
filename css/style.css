@@ -73,6 +73,11 @@ div#task4_solution p {
     font-weight: bold;
 }
 
+div#task5_solution p {
+    font-size: xx-large;
+    font-weight: bold;
+}
+
 div#task1_solution div {
     font-size: x-large;
 }
@@ -102,6 +107,11 @@ div#task4_solution div {
     margin-bottom: 40px;
 }
 
+div#task5_solution div {
+    font-size: x-large;
+    margin-bottom: 40px;
+}
+
 div#task3_solution span {
     font-size: x-large;
     margin-bottom: 5px;
@@ -109,6 +119,12 @@ div#task3_solution span {
 }
 
 div#task4_solution span {
+    font-size: x-large;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+div#task5_solution span {
     font-size: x-large;
     margin-bottom: 5px;
     font-weight: bold;

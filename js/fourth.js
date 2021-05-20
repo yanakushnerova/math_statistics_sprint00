@@ -4,7 +4,7 @@ function momentMean(i, arr) {
     document.getElementById("task4_solution").appendChild(solution)
 
     let property_name = document.createElement("span")
-    property_name.innerText = "Expected value (moment's method): "
+    property_name.innerText = "Mathematical expected value (moment's method): "
     document.getElementById("task4_solution").appendChild(property_name)
 
     let mean_value = parseFloat((arr.reduce((a, b) => a + b) / arr.length).toFixed(7))
@@ -56,7 +56,7 @@ function momentDeviation(arr) {
 
 function likelihoodMean(arr) {
     let property_name = document.createElement("span")
-    property_name.innerText = "Expected value (Likelihood's method): "
+    property_name.innerText = "Mathematical expected value (Likelihood's method): "
     document.getElementById("task4_solution").appendChild(property_name)
 
     let mean_value = parseFloat((arr.reduce((a, b) => a + b) / arr.length).toFixed(7))
