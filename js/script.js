@@ -123,6 +123,11 @@ document.addEventListener('DOMContentLoaded', function() {
             let arr = parseSample(n[i].value)
             arr.sort((a, b) => a - b)
             momentMean(i, arr)
+            momentDispersion(arr)
+            momentDeviation(arr)
+            likelihoodMean(arr)
+            likelihoodDispersion(arr)
+            likelihoodDeviation(arr)
         }
     }
 

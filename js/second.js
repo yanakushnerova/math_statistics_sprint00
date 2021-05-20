@@ -81,7 +81,9 @@ function empiricalDistribution(i, arr, frequency) {
 
     for (let i = 0; i < new_arr.length; i++) {
         if (i == 0) {
-            td2.innerHTML += result_arr[i] + ",&nbsp&nbsp&nbspx&nbsp&nbsp&nbsp &#8804 " + new_arr[i]
+            td2.innerHTML += result_arr[i] + ",&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp x &#8804 " + new_arr[i]
+        } else if (i == new_arr.length - 1) {
+            td2.innerHTML += result_arr[i] + ",&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp x > " + new_arr[i]
         } else {
             td2.innerHTML += result_arr[i] + ",&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + new_arr[i - 1] + "< x &#8804 " + new_arr[i]
         }

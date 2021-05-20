@@ -184,8 +184,7 @@ function sampleAssymetry(arr) {
     asymmetry.innerText = asymmetry_value.toFixed(5)
     document.getElementById("task3_solution").appendChild(asymmetry)
 }
-// let asymm = cm3 / dev ** 3;
-// let exc = (cm4 / dev ** 4) - 3;
+
 function sampleExcess(arr) {
     let property_name = document.createElement("span")
     property_name.innerText = "Excess: "
