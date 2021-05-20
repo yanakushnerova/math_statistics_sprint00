@@ -115,9 +115,16 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // task4_calculate.onclick = function() {
-
-    // }
+    task4_calculate.onclick = function() {
+        solution4.innerHTML = ""
+        let n = document.querySelectorAll("#sample_inputs > input")
+        
+        for (let i = 0; i < n.length ; i++) {
+            let arr = parseSample(n[i].value)
+            arr.sort((a, b) => a - b)
+            momentMean(i, arr)
+        }
+    }
 
     // task5_calculate.onclick = function() {
 
