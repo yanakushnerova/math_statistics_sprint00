@@ -1,10 +1,10 @@
 function expectedCentral(i, arr, frequency) {
     let solution = document.createElement("p")
-    solution.innerHTML = "Sample " + sample_names[i] + ":"
+    solution.innerHTML = "Вибірка " + sample_names[i] + ":"
     document.getElementById("task5_solution").appendChild(solution)
 
     let property_name = document.createElement("span")
-    property_name.innerText = "Mathematical expected value (central interval): "
+    property_name.innerText = "Інтервальна оцінка математичного сподівання (центральний інтервал): "
     document.getElementById("task5_solution").appendChild(property_name)
 
     let new_arr = removeDuplicates(arr)
@@ -31,7 +31,7 @@ function expectedCentral(i, arr, frequency) {
 
 function expectedLower(arr) {
     let property_name = document.createElement("span")
-    property_name.innerText = "Mathematical expected value (lower interval): "
+    property_name.innerText = "Інтервальна оцінка математичного сподівання (нижній інтервал): "
     document.getElementById("task5_solution").appendChild(property_name)
 
     let mean_value = parseFloat((arr.reduce((a, b) => a + b) / arr.length).toFixed(7))
@@ -53,7 +53,7 @@ function expectedLower(arr) {
 
 function expectedUpper(arr) {
     let property_name = document.createElement("span")
-    property_name.innerText = "Mathematical expected value (upper interval): "
+    property_name.innerText = "Інтервальна оцінка математичного сподівання (верхній інтервал): "
     document.getElementById("task5_solution").appendChild(property_name)
 
     let mean_value = parseFloat((arr.reduce((a, b) => a + b) / arr.length).toFixed(7))
@@ -75,7 +75,7 @@ function expectedUpper(arr) {
 
 function deviationCentral(arr) {
     let property_name = document.createElement("span")
-    property_name.innerText = "Deviation value (central interval): "
+    property_name.innerText = "Інтервальна оцінка середньоквадратичного відхилення (центральний інтервал): "
     document.getElementById("task5_solution").appendChild(property_name)
 
     let mean_value = parseFloat((arr.reduce((a, b) => a + b) / arr.length).toFixed(5))
@@ -97,7 +97,7 @@ function deviationCentral(arr) {
 
 function deviationLower(arr) {
     let property_name = document.createElement("span")
-    property_name.innerText = "Deviation value (lower interval): "
+    property_name.innerText = "Інтервальна оцінка середньоквадратичного відхилення (нижній інтервал): "
     document.getElementById("task5_solution").appendChild(property_name)
 
     let mean_value = parseFloat((arr.reduce((a, b) => a + b) / arr.length).toFixed(5))
@@ -119,7 +119,7 @@ function deviationLower(arr) {
 
 function deviationUpper(arr) {
     let property_name = document.createElement("span")
-    property_name.innerText = "Deviation value (upper interval): "
+    property_name.innerText = "Інтервальна оцінка середньоквадратичного відхилення (верхній інтервал): "
     document.getElementById("task5_solution").appendChild(property_name)
 
     let mean_value = parseFloat((arr.reduce((a, b) => a + b) / arr.length).toFixed(5))

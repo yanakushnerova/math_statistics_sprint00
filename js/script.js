@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
         let samples = document.getElementById("sample_n").value
 
         if (samples > 26 || samples < 2) {
-            sample_info.innerText = "Incorrect number of samples"
+            sample_info.innerText = "Невірна кількість вибірок"
         } else {
             generateInputs(samples)
         }
@@ -64,13 +64,13 @@ document.addEventListener('DOMContentLoaded', function() {
         let n = document.querySelectorAll("#sample_inputs > input")
 
         for (let i = 0; i < n.length; i++) {
-            solution1.innerHTML += "<p>Sample " + (sample_names[i]) + ": </p>"
+            solution1.innerHTML += "<p>Вибірка " + (sample_names[i]) + ": </p>"
             let arr = parseSample(n[i].value)
             arr.sort((a, b) => a - b)
             outputSample(i, arr)
             solution1.innerHTML += "<br>"
             outputRange(i, arr)
-            solution1.innerHTML += "<br><div>Table: <div><br>"
+            solution1.innerHTML += "<br><div>Таблиця: <div><br>"
 
             let new_array = removeDuplicates(arr)
             let frequency_array = countFrequency(arr)

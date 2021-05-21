@@ -1,6 +1,6 @@
 function frequencyTable(arr, frequency) {
     let table = document.createElement("table") 
-    table.innerHTML = "<th>Value</th><th>Frequency</th><th>Cumulative frequency</th><th>Relative frequency</th><th>Cumulative relative frequency</th>"
+    table.innerHTML = "<th>Елемент</th><th>Частота</th><th>Накопичувана частота</th><th>Відносна частота</th><th>Накопичувана відносна частота</th>"
 
     let cumulative_frequency = 0
     let cumulative_relative_frequency = 0
@@ -9,7 +9,7 @@ function frequencyTable(arr, frequency) {
     for (let i = 0; i < arr.length; i++) {
         total_frequency += frequency[arr[i]]
     }
-    
+
     for (let i = 0; i < arr.length; i++) {
         let row = document.createElement("tr")
         let first = document.createElement("td")

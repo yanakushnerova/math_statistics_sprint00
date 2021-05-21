@@ -1,10 +1,10 @@
 function createPolygonChart(i, frequency) {
     let solution = document.createElement("p")
-    solution.innerHTML = "Sample " + sample_names[i] + ":"
+    solution.innerHTML = "Вибірка " + sample_names[i] + ":"
     document.getElementById("task2_solution").appendChild(solution)
 
     let chart_name = document.createElement("div")
-    chart_name.innerText = "Polygon chart: "
+    chart_name.innerText = "Полігон: "
     document.getElementById("task2_solution").appendChild(chart_name)
 
     let polygon_chart = document.createElement("div")
@@ -19,7 +19,7 @@ function createPolygonChart(i, frequency) {
         data: {
             labels: Object.keys(frequency).sort((a, b) => a - b),
             datasets: [{
-                label: 'Variation Series',
+                label: 'Варіаційний ряд',
                 backgroundColor: 'rgb(76, 153, 0)',
                 borderColor: 'rgb(76, 153, 0)',
                 data: Object.keys(frequency).sort((a, b) => a - b).map((key) => frequency[key])
@@ -30,7 +30,7 @@ function createPolygonChart(i, frequency) {
 
 function createBarChart(i, frequency) {
     let chart_name = document.createElement("div")
-    chart_name.innerText = "Histogram chart: "
+    chart_name.innerText = "Гістограма: "
     document.getElementById("task2_solution").appendChild(chart_name)
 
     let bar_chart = document.createElement("div")
@@ -45,7 +45,7 @@ function createBarChart(i, frequency) {
         data: {
             labels: Object.keys(frequency).sort((a, b) => a - b),
             datasets: [{
-                label: 'Variation Series',
+                label: 'Варіаційний ряд',
                 backgroundColor: 'rgb(76, 153, 0)',
                 borderColor: 'rgb(76, 153, 0)',
                 data: Object.keys(frequency).sort((a, b) => a - b).map((key) => frequency[key])
@@ -70,7 +70,7 @@ function empiricalDistribution(i, arr, frequency) {
     }
 
     let task_name = document.createElement("div")
-    task_name.innerText = "Empirical distribution function: "
+    task_name.innerText = "Емпірична функція розподілення: "
     document.getElementById("task2_solution").appendChild(task_name)
 
     let table = document.createElement("table")
@@ -96,7 +96,7 @@ function empiricalDistribution(i, arr, frequency) {
     document.getElementById("task2_solution").appendChild(table)
 
     let chart_name = document.createElement("div")
-    chart_name.innerText = "Empirical distribution function graph: "
+    chart_name.innerText = "Графік емпіричної функції розподілення: "
     document.getElementById("task2_solution").appendChild(chart_name)
 
     let bar_chart = document.createElement("div")
@@ -111,7 +111,7 @@ function empiricalDistribution(i, arr, frequency) {
         data: {
             labels: new_arr,
             datasets: [{
-                label: 'Variation Series',
+                label: 'Варіаційний ряд',
                 backgroundColor: 'rgb(76, 153, 0)',
                 borderColor: 'rgb(76, 153, 0)',
                 data: result_arr

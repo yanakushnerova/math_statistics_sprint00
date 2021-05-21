@@ -1,10 +1,10 @@
 function sampleMean(i, arr) {
     let solution = document.createElement("p")
-    solution.innerHTML = "Sample " + sample_names[i] + ":"
+    solution.innerHTML = "Вибірка " + sample_names[i] + ":"
     document.getElementById("task3_solution").appendChild(solution)
 
     let property_name = document.createElement("span")
-    property_name.innerText = "Mean: "
+    property_name.innerText = "Вибіркове середнє значення: "
     document.getElementById("task3_solution").appendChild(property_name)
 
     let mean_value = parseFloat((arr.reduce((a, b) => a + b) / arr.length).toFixed(5))
@@ -16,7 +16,7 @@ function sampleMean(i, arr) {
 
 function sampleMedian(arr) {
     let property_name = document.createElement("span")
-    property_name.innerText = "Median: "
+    property_name.innerText = "Медіана: "
     document.getElementById("task3_solution").appendChild(property_name)
 
     let median_value
@@ -33,7 +33,7 @@ function sampleMedian(arr) {
 
 function sampleMode(arr) {
     let property_name = document.createElement("span")
-    property_name.innerText = "Mode: "
+    property_name.innerText = "Мода: "
     document.getElementById("task3_solution").appendChild(property_name)
 
     let mode_arr = []
@@ -63,7 +63,7 @@ function sampleMode(arr) {
 
 function sampleDispersion(arr) {
     let property_name = document.createElement("span")
-    property_name.innerText = "Sample dispersion: "
+    property_name.innerText = "Вибіркова дисперсія: "
     document.getElementById("task3_solution").appendChild(property_name)
 
     let mean_value = parseFloat((arr.reduce((a, b) => a + b) / arr.length).toFixed(5))
@@ -82,7 +82,7 @@ function sampleDispersion(arr) {
 
 function sampleDeviation(arr) {
     let property_name = document.createElement("span")
-    property_name.innerText = "Sample deviation: "
+    property_name.innerText = "Вибіркове середньоквадратичне відхилення: "
     document.getElementById("task3_solution").appendChild(property_name)
 
     let mean_value = parseFloat((arr.reduce((a, b) => a + b) / arr.length).toFixed(5))
@@ -103,7 +103,7 @@ function sampleDeviation(arr) {
 
 function sampleCoefficient(arr) {
     let property_name = document.createElement("span")
-    property_name.innerText = "Variation coefficient: "
+    property_name.innerText = "Коефіціент варіації: "
     document.getElementById("task3_solution").appendChild(property_name)
 
     let mean_value = parseFloat((arr.reduce((a, b) => a + b) / arr.length).toFixed(5))
@@ -124,7 +124,7 @@ function sampleCoefficient(arr) {
 
 function centralMoment3(arr) {
     let property_name = document.createElement("span")
-    property_name.innerText = "Central moment 3: "
+    property_name.innerText = "Центральний момент 3: "
     document.getElementById("task3_solution").appendChild(property_name)
 
     let mean_value = parseFloat((arr.reduce((a, b) => a + b) / arr.length).toFixed(5))
@@ -143,7 +143,7 @@ function centralMoment3(arr) {
 
 function centralMoment4(arr) {
     let property_name = document.createElement("span")
-    property_name.innerText = "Central moment 4: "
+    property_name.innerText = "Центральний момент 4: "
     document.getElementById("task3_solution").appendChild(property_name)
 
     let mean_value = parseFloat((arr.reduce((a, b) => a + b) / arr.length).toFixed(5))
@@ -162,7 +162,7 @@ function centralMoment4(arr) {
 
 function sampleAssymetry(arr) {
     let property_name = document.createElement("span")
-    property_name.innerText = "Asymmetry: "
+    property_name.innerText = "Асиметрія: "
     document.getElementById("task3_solution").appendChild(property_name)
 
     let mean_value = parseFloat((arr.reduce((a, b) => a + b) / arr.length).toFixed(5))
@@ -187,7 +187,7 @@ function sampleAssymetry(arr) {
 
 function sampleExcess(arr) {
     let property_name = document.createElement("span")
-    property_name.innerText = "Excess: "
+    property_name.innerText = "Ексцес: "
     document.getElementById("task3_solution").appendChild(property_name)
 
     let mean_value = parseFloat((arr.reduce((a, b) => a + b) / arr.length).toFixed(5))
@@ -212,7 +212,7 @@ function sampleExcess(arr) {
 
 function sampleCorrectedDispersion(arr) {
     let property_name = document.createElement("span")
-    property_name.innerText = "Sample corrected dispersion: "
+    property_name.innerText = "Виправлена дисперсія: "
     document.getElementById("task3_solution").appendChild(property_name)
 
     let mean_value = parseFloat((arr.reduce((a, b) => a + b) / arr.length).toFixed(5))
@@ -231,7 +231,7 @@ function sampleCorrectedDispersion(arr) {
 
 function sampleCorrectedDeviation(arr) {
     let property_name = document.createElement("span")
-    property_name.innerText = "Sample corrected deviation: "
+    property_name.innerText = "Виправлене середнє квадратичне відхилення: "
     document.getElementById("task3_solution").appendChild(property_name)
 
     let mean_value = parseFloat((arr.reduce((a, b) => a + b) / arr.length).toFixed(5))

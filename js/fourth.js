@@ -1,10 +1,10 @@
 function momentMean(i, arr) {
     let solution = document.createElement("p")
-    solution.innerHTML = "Sample " + sample_names[i] + ":"
+    solution.innerHTML = "Вибірка " + sample_names[i] + ":"
     document.getElementById("task4_solution").appendChild(solution)
 
     let property_name = document.createElement("span")
-    property_name.innerText = "Mathematical expected value (moment's method): "
+    property_name.innerText = "Точкова оцінка математичного очікування (метод моментів): "
     document.getElementById("task4_solution").appendChild(property_name)
 
     let mean_value = parseFloat((arr.reduce((a, b) => a + b) / arr.length).toFixed(7))
@@ -16,7 +16,7 @@ function momentMean(i, arr) {
 
 function momentDispersion(arr) {
     let property_name = document.createElement("span")
-    property_name.innerText = "Dispersion value (moment's method): "
+    property_name.innerText = "Точкова оцінка дисперсії (метод моментів): "
     document.getElementById("task4_solution").appendChild(property_name)
 
     let mean_value = parseFloat((arr.reduce((a, b) => a + b) / arr.length).toFixed(5))
@@ -35,7 +35,7 @@ function momentDispersion(arr) {
 
 function momentDeviation(arr) {
     let property_name = document.createElement("span")
-    property_name.innerText = "Deviation value (moment's method): "
+    property_name.innerText = "Точкова оцінка середньоквадратичного відхилення (метод моментів): "
     document.getElementById("task4_solution").appendChild(property_name)
 
     let mean_value = parseFloat((arr.reduce((a, b) => a + b) / arr.length).toFixed(5))
@@ -56,7 +56,7 @@ function momentDeviation(arr) {
 
 function likelihoodMean(arr) {
     let property_name = document.createElement("span")
-    property_name.innerText = "Mathematical expected value (Likelihood's method): "
+    property_name.innerText = "Точкова оцінка математичного очікування (метод найбільшої подібності): "
     document.getElementById("task4_solution").appendChild(property_name)
 
     let mean_value = parseFloat((arr.reduce((a, b) => a + b) / arr.length).toFixed(7))
@@ -68,7 +68,7 @@ function likelihoodMean(arr) {
 
 function likelihoodDispersion(arr) {
     let property_name = document.createElement("span")
-    property_name.innerText = "Dispersion value (Likelihood's method): "
+    property_name.innerText = "Точкова оцінка дисперсії (метод найбільшої подібності): "
     document.getElementById("task4_solution").appendChild(property_name)
 
     let mean_value = parseFloat((arr.reduce((a, b) => a + b) / arr.length).toFixed(5))
@@ -87,7 +87,7 @@ function likelihoodDispersion(arr) {
 
 function likelihoodDeviation(arr) {
     let property_name = document.createElement("span")
-    property_name.innerText = "Deviation value (Likelihood's method): "
+    property_name.innerText = "Точкова оцінка середньоквадратичного відхилення (метод найбільшої подібності): "
     document.getElementById("task4_solution").appendChild(property_name)
 
     let mean_value = parseFloat((arr.reduce((a, b) => a + b) / arr.length).toFixed(5))

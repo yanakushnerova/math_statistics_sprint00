@@ -58,7 +58,7 @@ function outputSample(i, arr) {
     let sample_output = document.createElement("div")
     sample_output.setAttribute("id", "sample_output_" + i)
 
-    sample_output.innerHTML += "<div>Variation series:   </div><div>["
+    sample_output.innerHTML += "<div>Варіаційний ряд:   </div><div>["
 
     for (let i = 0; i < arr.length; i++) {
         if (arr.length == 1 || i == arr.length - 1) {
@@ -76,7 +76,7 @@ function outputRange(i, arr) {
     let sample_range = document.createElement("div")
     sample_range.setAttribute("id", "sample_range_" + i)
 
-    sample_range.innerHTML += "<div>Range:   </div><div>["
+    sample_range.innerHTML += "<div>Діапазон:   </div><div>["
 
     for (let i = 0; i < arr.length; i++) {
         if (i == 0) {
