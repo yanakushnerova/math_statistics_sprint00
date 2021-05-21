@@ -4,7 +4,7 @@ function momentMean(i, arr) {
     document.getElementById("task4_solution").appendChild(solution)
 
     let property_name = document.createElement("span")
-    property_name.innerText = "Точкова оцінка математичного очікування (метод моментів): "
+    property_name.innerText = "Точкова оцінка математичного сподівання (метод моментів): "
     document.getElementById("task4_solution").appendChild(property_name)
 
     let mean_value = parseFloat((arr.reduce((a, b) => a + b) / arr.length).toFixed(7))
@@ -56,7 +56,7 @@ function momentDeviation(arr) {
 
 function likelihoodMean(arr) {
     let property_name = document.createElement("span")
-    property_name.innerText = "Точкова оцінка математичного очікування (метод найбільшої подібності): "
+    property_name.innerText = "Точкова оцінка математичного сподівання (метод найбільшої подібності): "
     document.getElementById("task4_solution").appendChild(property_name)
 
     let mean_value = parseFloat((arr.reduce((a, b) => a + b) / arr.length).toFixed(7))

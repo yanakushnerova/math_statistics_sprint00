@@ -24,6 +24,22 @@ function createPolygonChart(i, frequency) {
                 borderColor: 'rgb(76, 153, 0)',
                 data: Object.keys(frequency).sort((a, b) => a - b).map((key) => frequency[key])
             }]
+        },
+        options: {
+            scales: {
+              x: {
+                title: {
+                  display: true,
+                  text: 'Значення варіанти'
+                }
+              },
+              y: {
+                title: {
+                  display: true,
+                  text: 'Частота'
+                }
+              }
+            }
         }
     })
 }
@@ -50,6 +66,22 @@ function createBarChart(i, frequency) {
                 borderColor: 'rgb(76, 153, 0)',
                 data: Object.keys(frequency).sort((a, b) => a - b).map((key) => frequency[key])
             }]
+        },
+        options: {
+            scales: {
+              x: {
+                title: {
+                  display: true,
+                  text: 'Значення варіанти'
+                }
+              },
+              y: {
+                title: {
+                  display: true,
+                  text: 'Частота'
+                }
+              }
+            }
         }
     })
 }
@@ -116,6 +148,22 @@ function empiricalDistribution(i, arr, frequency) {
                 borderColor: 'rgb(76, 153, 0)',
                 data: result_arr
             }]
+        },
+        options: {
+            scales: {
+              x: {
+                title: {
+                  display: true,
+                  text: 'Інтервал'
+                }
+              },
+              y: {
+                title: {
+                  display: true,
+                  text: 'Відносна частота'
+                }
+              }
+            }
         }
     })
 }

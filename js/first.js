@@ -1,6 +1,6 @@
 function frequencyTable(arr, frequency) {
     let table = document.createElement("table") 
-    table.innerHTML = "<th>Елемент</th><th>Частота</th><th>Накопичувана частота</th><th>Відносна частота</th><th>Накопичувана відносна частота</th>"
+    table.innerHTML = "<th>Значення варіанти</th><th>Частота</th><th>Накопичувана частота</th><th>Відносна частота</th><th>Накопичувана відносна частота</th>"
 
     let cumulative_frequency = 0
     let cumulative_relative_frequency = 0

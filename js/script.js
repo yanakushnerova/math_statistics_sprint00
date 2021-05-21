@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     task5_calculate.onclick = function() {
-        solution4.innerHTML = ""
+        solution5.innerHTML = ""
         let n = document.querySelectorAll("#sample_inputs > input")
         
         for (let i = 0; i < n.length ; i++) {

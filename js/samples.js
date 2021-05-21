@@ -76,7 +76,7 @@ function outputRange(i, arr) {
     let sample_range = document.createElement("div")
     sample_range.setAttribute("id", "sample_range_" + i)
 
-    sample_range.innerHTML += "<div>Діапазон:   </div><div>["
+    sample_range.innerHTML += "<div>Розмах(діапазон) вибірки:   </div><div>["
 
     for (let i = 0; i < arr.length; i++) {
         if (i == 0) {
